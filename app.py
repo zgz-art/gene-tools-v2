@@ -443,7 +443,7 @@ if word_template is not None and image_files:
                         new_title = f"{sup}-{name}-{pos}-{lvl}-个人资料"
                         output_bytes = fill_word_with_images(word_bytes, classified, new_title=new_title)
                         word_filename = f"{sup}-{name}-{pos}-{lvl}-资料.docx"
-                        word_filename = "".join(c for c in word_filename if c not in r'\/:*?"<>|")
+                        word_filename = "".join(c for c in word_filename if c not in r'\/:*?"<>|')
                         st.success("✅ Word 填充成功！")
                         st.download_button(
                             label="📥 下载填充后的 Word 文件",
